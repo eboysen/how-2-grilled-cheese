@@ -22,6 +22,7 @@
     <radialGradient id="paint0_radial_24_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(232.892 242.367) rotate(90) scale(135.367 176.892)">
         <stop stop-color="#8A7448"/>
         <stop offset="1" stop-color="#DCBD82"/>
+        <animate attributeName="topFill" dur="1000ms" from="0%" to="90%"/>
     </radialGradient>
 </defs>
 </svg>

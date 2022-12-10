@@ -1,21 +1,161 @@
-#Frame
-    #BottomBread
-    #Cheese
-    #TopBread
-        animation:
+body{
+    margin:0px;
+}
+
+.bg{
+    background-color: #F7B840;
+}
+
+.center{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin:auto;
+    width:100%;
+}
+
+.container{
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    width:250px;
+    box-shadow: 0px 5px 5px #888888;
+}
+
+.title{
+    color:white;
+    font-family: 'Jomhuria';
+    font-size: 96pt;
+}
+p{
+    margin:0;
+}
+
+
+.message{
+    color:white;
+    font-family:cursive;
+}
+
+#Frame{
+    width:50%;
+}
+
+#Cheese1{
+    opacity: 0;
+    animation:dropCheese 1s ease-in-out forwards;
+    animation-delay:1s;
+}
+#Cheese2{
+    opacity: 0;
+    animation:Melt 1s ease-in-out forwards;
+    animation-delay:5s;
+}
+#TopBread{
+    opacity: 0;
+    animation:dropTopSlice 1s ease-in-out forwards;
+    animation-delay:2s;
+}
+#topFill{
+    opacity: 100;
+    fill:#FCDB9A;
+    animation:Toast 2s ease-in-out forwards;
+    animation-delay:3s;
+    stroke:#8E6E1B;
+}
+#bottomFill{
+    opacity: 100;
+    fill:#FCDB9A;
+    stroke:#8E6E1B;
+}
+#topCrust1{
+    opacity: 100;
+    fill:#D0B174;
+    animation:ToastCrust 1s ease-in-out forwards;
+    animation-delay:3s;
+    stroke:#8E6E1B;
+}
+#topCrust2{
+    opacity: 100;
+    fill:#D0B174;
+    animation:ToastCrust 1s ease-in-out forwards;
+    animation-delay:3s;
+    stroke:#8E6E1B;
+}
+#bottomCrust1{
+    opacity: 100;
+    fill:#D0B174;
+    animation:ToastCrust 1s ease-in-out forwards;
+    animation-delay:3s;
+    stroke:#8E6E1B;
+}
+#bottomCrust2{
+    opacity: 100;
+    fill:#D0B174;
+    animation:ToastCrust 1s ease-in-out forwards;
+    animation-delay:3s;
+    stroke:#8E6E1B;
+}
+
+    
 
 @keyframes dropCheese {
-    
+    0%{
+        opacity: 20;
+        transform: translate(0px,-200px);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0px,0px);
+    }
+
 }
 
 @keyframes dropTopSlice {
-    
+    0%{
+        opacity: 20;
+        transform: translate(0px,-200px);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0px,0px);
+    }
 }
 
 @keyframes Toast {
-    
+    0%{
+        opacity:100;
+        fill:#FCDB9A;
+        stroke:#8E6E1B;
+    }
+    50%{
+        opacity: 100;
+        fill:"#4F3D0E";
+    }
+    100%{
+        opacity:100;
+        fill:url(#radialGradient);
+        stroke: #4F3D0E;
+    }
+}
+
+@keyframes ToastCrust {
+    0%{
+        fill:#D0B174;
+        stroke:#8E6E1B;
+    }
+    100%{
+        fill:#8B764D;
+        stroke: #4F3D0E;
+    }
 }
 
 @keyframes Melt {
-    
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100;
+    }
 }
