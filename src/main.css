@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
     margin:0px;
 }
 
 .bg{
-    background-color: #F7B840;
+    background-color: #b1e6ff;
 }
 
 .center{
@@ -17,25 +19,54 @@ body{
 }
 
 .container{
-    background-color: #D9D9D9;
     border-radius: 50%;
     width:250px;
-    box-shadow: 0px 5px 5px #888888;
+    padding: 25px;
 }
 
 .title{
     color:white;
     font-family: 'Jomhuria';
     font-size: 96pt;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 p{
     margin:0;
 }
 
+.button{
+    background-color: blue;
+    border-radius:10px;
+    color:white;
+    padding:5px;
+    min-width: 100px;
+    height: 45px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+
+.button:active{
+    background-color: navy;
+}
 
 .message{
-    color:white;
-    font-family:cursive;
+    text-align: center;
+    height: 5vh;
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer{
+    position: absolute;
+    margin:auto;
+    margin-top:95vh;
+    height:5vh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
 }
 
 #Frame{
@@ -60,12 +91,14 @@ p{
 #topFill{
     opacity: 100;
     fill:#FCDB9A;
-    animation:Toast 2s ease-in-out forwards;
+    animation:Toast 1s ease-in-out forwards;
     animation-delay:3s;
     stroke:#8E6E1B;
 }
 #bottomFill{
     opacity: 100;
+    animation:Toast 1s ease-in-out forwards;
+    animation-delay: 3s;
     fill:#FCDB9A;
     stroke:#8E6E1B;
 }
@@ -125,17 +158,11 @@ p{
 
 @keyframes Toast {
     0%{
-        opacity:100;
         fill:#FCDB9A;
         stroke:#8E6E1B;
     }
-    50%{
-        opacity: 100;
-        fill:"#4F3D0E";
-    }
     100%{
-        opacity:100;
-        fill:url(#radialGradient);
+        fill:#dfbb73;
         stroke: #4F3D0E;
     }
 }
